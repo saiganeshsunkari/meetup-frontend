@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  rootUrl : "clb-demo-1852248692.us-east-1.elb.amazonaws.com"
+  rootUrl : "http://localhost:4200"
 };
