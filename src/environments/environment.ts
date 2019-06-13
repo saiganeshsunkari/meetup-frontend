@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  rootUrl : "http://127.0.0.1:8081"
+  rootUrl : "http://aws-meetup-1001832575.us-east-2.elb.amazonaws.com:8081"
 };
