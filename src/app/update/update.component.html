@@ -1,0 +1,42 @@
+<div id="submitDiv1" class="container" style="padding: 15px; padding-top: 2px;margin-top: 5%">
+
+  <!-- form for student data -->
+
+
+  <div class="form-group has-feedback" style='width:40%;margin-left: 25%'>
+    <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter name of the student">
+    <!-- <i class="glyphicon glyphicon-tags form-control-feedback"></i> -->
+    <button style="cursor: pointer;float:right;margin-top: -8%" class="btn btn-success" type="submit"
+      (click)="getUser()">Get User</button>
+  </div>
+  <div id="error" class="alert alert-danger" *ngIf="showError" style="display:none">
+    <strong>Error occured while updating!</strong>
+  </div>
+  <div id="success" class="alert alert-success" *ngIf="show" style="display:none">
+    <strong>Successfully updated!</strong>
+  </div>
+  <div class="container" *ngIf="id" style="margin-left: 25%; margin-top: 10%; width: 40%">
+    <form id="takeID" name="studentForm">
+
+
+      <div class="form-group has-feedback">
+        <input type="text" name="First Name" [(ngModel)]="fName" class="form-control"
+          placeholder="Enter Your First Name">
+        <!-- <i class="glyphicon glyphicon-tags form-control-feedback"></i> -->
+      </div>
+
+
+      <div class="form-group has-feedback">
+        <input type="text" name="sName" [(ngModel)]="sName" class="form-control" placeholder="Enter Your Second Name">
+        <!-- <i class="glyphicon glyphicon-tags form-control-feedback"></i> -->
+      </div>
+
+      <div class="form-group has-feedback">
+        <input type="text" [(ngModel)]="age" name="age" class="form-control" placeholder="Enter age">
+        <!-- <i class="glyphicon glyphicon-tags form-control-feedback"></i> -->
+      </div>
+    </form>
+
+    <button style="cursor: pointer;float:right;" class="btn btn-success" type="submit" (click) = "update()">Update Data</button>
+  </div>
+</div>

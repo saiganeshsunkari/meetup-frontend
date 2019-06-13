@@ -1,0 +1,42 @@
+<div class="container" style=" width:30%; padding: 15px; padding-top: 10%">
+
+	<!-- form for student data -->
+	<form id="takeID" name="studentForm">
+
+
+		<div class="form-group has-feedback">
+			<input type="text" name="First Name" [(ngModel)]="fName" class="form-control"
+				placeholder="Enter Your First Name">
+			<i class="glyphicon glyphicon-tags form-control-feedback"></i>
+		</div>
+
+
+		<div class="form-group has-feedback">
+			<input type="text" name="sName" [(ngModel)]="sName" class="form-control"
+				placeholder="Enter Your Second Name">
+			<i class="glyphicon glyphicon-tags form-control-feedback"></i>
+		</div>
+
+		<div class="form-group has-feedback">
+			<input type="text" [(ngModel)]="age" name="age" class="form-control" placeholder="Enter age">
+			<i class="glyphicon glyphicon-tags form-control-feedback"></i>
+		</div>
+	</form>
+
+	<div *ngIf="showError" class="alert alert-danger">
+		<strong>Alert!</strong> Please fill all form fields.
+	</div>
+
+	<div *ngIf="apiError" class="alert alert-danger">
+		<strong>Error!</strong>
+	</div>
+
+	<div *ngIf="apiSuccess" class="alert alert-success">
+		<strong>Success!</strong>
+	</div>
+	<button type="submit" class='btn btn-success' style='float: right' (click)="submit()"> Add </button>
+	<!-- <div class="text-center">
+				<ul class="pagination pagination-lg">
+					<li class="pageBtn"><a  style="cursor: pointer" (click)="submit()">Submit &nbsp;<span class="glyphicon glyphicon-thumbs-up"></span></a></li>
+				</ul>
+			</div> -->
