@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  rootUrl : "http://172.17.10.53:8081"
+  rootUrl : "clb-demo-1852248692.us-east-1.elb.amazonaws.com"
 };
